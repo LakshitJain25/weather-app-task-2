@@ -12,10 +12,10 @@ export default function Home() {
   const [weatherData, setWeatherData] = useState(null)
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const locationRes = await axios.get(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09QzeKute5GSXAOUVQSY3orxdxaa6LoAhV&q=${locationValue}`)
+    const locationRes = await axios.get(`//dataservice.accuweather.com/locations/v1/cities/search?apikey=%09QzeKute5GSXAOUVQSY3orxdxaa6LoAhV&q=${locationValue}`)
     const locationData  = locationRes.data;
     const  key  = locationData[0]["Key"]
-    const res = await axios.get(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=QzeKute5GSXAOUVQSY3orxdxaa6LoAhV&metric=true`)
+    const res = await axios.get(`//dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=QzeKute5GSXAOUVQSY3orxdxaa6LoAhV&metric=true`)
     const { data } = res;
     const newData = { ...data, location: locationValue}
     setWeatherData(newData)
