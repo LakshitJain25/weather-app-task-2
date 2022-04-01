@@ -8,7 +8,8 @@ const Default = () => {
     const [weatherInfo, setWeatherInfo] = useState([])
 
     const getWeather = async (key, location) => {
-        const res = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/1day/${key}?apikey=QzeKute5GSXAOUVQSY3orxdxaa6LoAhV&metric=true`)
+
+        const res = await axios.post('/api/singleDay', { key })
         const { data } = res;
         const text = data["Headline"]["Text"]
         const temprature = data["DailyForecasts"][0]["Temperature"]["Maximum"]["Value"]
