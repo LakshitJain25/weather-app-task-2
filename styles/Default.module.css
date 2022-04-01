@@ -1,0 +1,85 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.heading{
+    font-size:2.8rem;
+    font-weight: 200;
+    padding-top:0.6rem;
+}
+.weatherCards{
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    height:100%;
+    margin-top:2rem;
+}
+.weatherCard{
+    background: white;
+    height:max-content;
+    min-height: 15rem;
+    width:15rem;
+    padding-bottom: 1.5rem;
+    color:#0c1e42;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    
+}
+.locationName{
+    text-transform: uppercase;
+    font-weight: 400;
+    color:gray;
+    margin-top:0.5rem;
+    font-size: 1.5rem;
+    width:100%;
+    text-align: center;
+}
+
+.temprature{
+    width:100%;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.temprature sup{
+    font-size: 1.6rem;
+}
+.info{
+    width:100%;
+    text-align: center;
+    color:gray;
+}
+
+@media (max-width:640px){
+    .heading{
+        font-size:1.6rem;
+        width: 100%;
+        text-align: center;
+    }
+    .weatherCard{
+        height:15rem;
+        
+    }
+    .locationName{
+        margin-top:0.5rem;
+        font-size: 1.2rem;
+        width:100%;
+        text-align: center;
+    }
+    
+    .temprature{
+        width:100%;
+        text-align: center;
+        font-size: 3.5rem;
+    }
+    
+    .temprature sup{
+        font-size: 1.6rem;
+    }
+}
